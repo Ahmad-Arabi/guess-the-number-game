@@ -19,9 +19,14 @@ const bodyBackground = function (color) {
 };
 
 document.querySelector('.check').addEventListener('click', function () {
-  const guess = Number(document.querySelector('.guess').value);
+  const guess =
+    document.querySelector('.guess').value != ''
+      ? Number(document.querySelector('.guess').value)
+      : document.querySelector('.guess').value;
+  console.log(guess);
+
   //Empty input
-  if (!guess) {
+  if (guess === null || guess === '' || guess === undefined) {
     displayMessage('😵 Please enter a guess!');
   }
   // input outside the specified range
