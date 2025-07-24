@@ -178,6 +178,13 @@ h1 {
   top: 40rem;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+}
+
 @media screen and (max-width: 1024px) {
   .range-alert {
     color: red;
