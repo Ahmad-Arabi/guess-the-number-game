@@ -3,12 +3,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,7 +18,6 @@ body {
   /* background-color: #60b347; */
   transition: background 1s ease-in-out;
   width: 100%;
-  max-width: 100vw;
   scroll-behavior: smooth;
   vertical-align: middle;
   overflow-x: hidden;
@@ -45,14 +44,14 @@ main {
 }
 
 .left {
-  width: 52rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .right {
-  width: 52rem;
+  width: 100%;
   font-size: 2rem;
 }
 
@@ -172,6 +171,7 @@ h1 {
 }
 
 .range-alert {
+  position: fixed;
   color: red;
   font-size: 3rem;
   right: 12rem;
@@ -195,12 +195,20 @@ h1 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .range-alert {
     color: red;
+    font-size: 2rem;
+    right: 2rem;
+    top: 70rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .range-alert {
     font-size: 1.5rem;
-    right: 10rem;
-    top: 35rem;
+    right: 5rem;
+    top: 65rem;
   }
 
   .again {
